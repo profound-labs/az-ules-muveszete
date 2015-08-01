@@ -1,0 +1,60 @@
+\ProvidesPackage{local}
+
+\usepackage{xcolor}
+\definecolor{textbody}{gray}{0.15}
+
+\usepackage{fontspec}
+
+%\setmainfont[
+%  Ligatures=TeX,
+%  SmallCapsFont = Crimson Roman,
+%  SmallCapsFeatures= { Ligatures = TeX, Letters = SmallCaps },
+%  BoldFont = Gentium Book Basic Bold,
+%]{Gentium}
+
+\setmainfont[
+  Ligatures=TeX,
+  %BoldFont = Crimson Semibold,
+  BoldFont = Crimson Bold,
+  ItalicFont = Crimson Italic,
+]{Crimson Roman}
+
+% A4: 297mm x 210mm
+
+\usepackage{geometry}
+\geometry{
+paperwidth=99mm,
+paperheight=210mm,
+top=10mm,
+bottom=15mm,
+left=6mm,
+right=6mm
+}
+\setlength{\stockwidth}{99mm}
+\setlength{\stockheight}{210mm}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./src-images/}}
+\usepackage{eso-pic}
+
+\usepackage{multicol}
+
+\newcommand*{\smallish}{\@setfontsize\smallish{9}{12}}
+
+\def\BOOK@apt{12}
+\def\BOOK@bpt{16}
+
+\renewcommand{\normalsize}{%
+  \@setfontsize\normalsize\BOOK@apt\BOOK@bpt
+  \abovedisplayskip 11\p@ \@plus3\p@ \@minus6\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
+  \belowdisplayskip \abovedisplayskip
+  \color{textbody}
+  \let\@listi\@listI}
+\normalsize
+
+\usepackage{microtype}
+\microtypesetup{final}
+
