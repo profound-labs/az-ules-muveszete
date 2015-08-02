@@ -5,19 +5,9 @@
 
 \usepackage{fontspec}
 
-%\setmainfont[
-%  Ligatures=TeX,
-%  SmallCapsFont = Crimson Roman,
-%  SmallCapsFeatures= { Ligatures = TeX, Letters = SmallCaps },
-%  BoldFont = Gentium Book Basic Bold,
-%]{Gentium}
-
 \setmainfont[
   Ligatures=TeX,
-  %BoldFont = Crimson Semibold,
-  BoldFont = Crimson Bold,
-  ItalicFont = Crimson Italic,
-]{Crimson Roman}
+]{Source Sans Pro}
 
 % A4: 297mm x 210mm
 
@@ -26,9 +16,9 @@
 paperwidth=99mm,
 paperheight=210mm,
 top=10mm,
-bottom=15mm,
-left=6mm,
-right=6mm
+bottom=10mm,
+left=8mm,
+right=8mm
 }
 \setlength{\stockwidth}{99mm}
 \setlength{\stockheight}{210mm}
@@ -38,12 +28,12 @@ right=6mm
 \graphicspath{{./src-images/}}
 \usepackage{eso-pic}
 
-\usepackage{multicol}
+\usepackage[hungarian]{babel}
 
-\newcommand*{\smallish}{\@setfontsize\smallish{9}{12}}
+\midsloppy
 
-\def\BOOK@apt{12}
-\def\BOOK@bpt{16}
+\def\BOOK@apt{11}
+\def\BOOK@bpt{14}
 
 \renewcommand{\normalsize}{%
   \@setfontsize\normalsize\BOOK@apt\BOOK@bpt
@@ -55,6 +45,13 @@ right=6mm
   \let\@listi\@listI}
 \normalsize
 
+\setsecnumdepth{chapter}
+
+\newcommand{\sectionSize}
+  {\@setfontsize\sectionSize{13}{15}}
+
+\setsecheadstyle{\sectionSize\bfseries}
+
 \usepackage{microtype}
-\microtypesetup{final}
+\microtypesetup{final,babel=true}
 
