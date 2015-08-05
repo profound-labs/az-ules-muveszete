@@ -1,6 +1,7 @@
 *.swp
 *.aux
 *.log
+*.out
 sources/*.pdf
 auto/
 sources/auto/
